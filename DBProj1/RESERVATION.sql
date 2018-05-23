@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[RESERVATION]
+(
+	[GuestId] INT NOT NULL,
+	[RoomId] INT NOT NULL,
+	[StartDate] DATE NOT NULL,
+	[EndDate] DATE NOT NULL
+	PRIMARY KEY (GuestId, RoomId),
+	FOREIGN KEY (GuestId) REFERENCES Guest(GuestID),
+	FOREIGN KEY (RoomId) REFERENCES ROOM(RoomID) 
+)
